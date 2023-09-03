@@ -1,0 +1,432 @@
+@import './components/common.scss';
+@import './components/var.scss';
+@import './components/mixin.scss';
+
+
+
+
+.menu {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+   color: white;
+   font-weight: 600;
+   text-align: center;
+   font-size: 23px;
+   padding: 30px;
+
+   position: fixed;
+   top: 10%;
+   left: 50%;
+   /* Положение по горизонтали в середине экрана */
+   width: 90%;
+   max-width: 500px;
+   /* Ограничение максимальной ширины */
+   height: 500px;
+   background-color: $darkviolet;
+   z-index: 100;
+   margin-left: -45%;
+   /* Половина ширины элемента, чтобы центрировать */
+
+
+   ul {
+      gap: 30px;
+   }
+
+   li {
+      padding: 20px 0;
+   }
+
+   .btn {
+      margin-top: 20px;
+      width: 100%;
+   }
+
+   &__btn {
+      display: none !important;
+      cursor: pointer;
+   }
+
+   @include laptop() {
+      &__btn {
+         display: block !important;
+      }
+   }
+}
+
+
+.header {
+   padding: 20px 0;
+
+   &__link {
+
+      color: $gray;
+
+      &:hover {
+         color: black;
+         transition: all .4s;
+      }
+   }
+
+   @include laptop {
+      &__nav {
+         display: none;
+      }
+
+      &__btns {
+         display: none;
+      }
+   }
+}
+
+.hero {
+   .btn {
+      display: inline;
+   }
+
+   .wrapper {
+      gap: 50px
+   }
+
+   p {
+      margin-bottom: 20px;
+   }
+
+   .hero__img {
+      max-width: 900px;
+   }
+
+
+   img {
+      // object-position: center left;
+      // max-width: 100%;
+      object-fit: cover;
+      // min-height: 100%;
+   }
+
+   @include laptop {
+      text-align: center;
+
+      .wrapper {
+         flex-direction: column-reverse;
+      }
+
+      .hero__img {
+         min-height: 40vh;
+      }
+   }
+}
+
+
+.shrtn {
+   padding: 50px 0;
+
+
+   form {
+      width: 100%;
+      gap: 40px;
+      padding: 7% 5%;
+      border-radius: 8px;
+
+      background-size: cover;
+      background-color: $darkviolet;
+      background-position: center;
+      background-image: url('../assets/bg-boost-desktop.svg');
+   }
+
+   .btn {
+      border-radius: 4px;
+   }
+
+   &__btns {
+      align-items: center;
+      gap: 20px;
+      display: flex;
+      flex-direction: row;
+   }
+
+   input {
+      padding: 20px 20px;
+      border-radius: 4px;
+      border: none;
+      width: 100%;
+      color: $gray
+   }
+
+   .wrapper {
+      margin-bottom: 0;
+      flex-direction: column;
+   }
+
+
+
+   &__box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+      overflow: hidden;
+   }
+
+   &__container {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      color: black;
+   }
+
+   @include tablet {
+      form {
+         flex-direction: column;
+
+         gap: 10px;
+
+         button {
+            width: 100%;
+         }
+      }
+
+      &__link {
+         overflow-wrap: break-word;
+
+         word-wrap: break-word;
+      }
+
+      &__box {
+
+         display: flex;
+         flex-direction: column;
+         padding: 20px;
+         align-items: start;
+
+
+         button {
+            width: 100%;
+         }
+
+      }
+
+      &__btns {
+         width: 100%;
+         justify-content: end;
+         gap: 10px;
+         flex-direction: column;
+
+         align-items: start;
+
+         .btn {
+            width: 100%;
+         }
+      }
+   }
+
+}
+
+
+
+
+
+
+.hist {
+   .btn {
+      border-radius: 4px;
+
+   }
+
+   a {
+      color: $cyan
+   }
+
+   .wrapper {}
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      color: black;
+   }
+
+   &__box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+
+
+   }
+}
+
+.stats {
+   // padding-bottom: 50px;
+
+   .wrapper {
+      flex-direction: column;
+   }
+
+   &__caption {
+      margin-bottom: 60px;
+   }
+
+   &__container {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+
+
+
+   }
+
+   &__img {
+      position: absolute;
+      top: -25px;
+      background-color: $darkviolet;
+      border-radius: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 60px;
+      height: 60px;
+   }
+
+   &__box {
+      z-index: 10;
+      background-color: white;
+      min-height: 260px;
+      width: 25vw;
+      padding: 40px 20px;
+      // word-wrap: break-word;
+      position: relative;
+
+
+
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 2px;
+         // height: 200px;
+         /* Height of the line */
+         background-color: blue;
+         /* Adjust the color as desired */
+      }
+   }
+
+   @include tablet {
+      text-align: center;
+
+      &__container {
+         flex-direction: column;
+         gap: 40px
+      }
+
+      &__box {
+         height: 30vh;
+         width: 100%;
+      }
+
+      &__img {
+         left: 40%;
+         right: 40%;
+
+      }
+   }
+}
+
+
+.boost {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   padding: 50px;
+   color: white;
+   background-size: cover;
+   background-color: $darkviolet;
+   background-position: center;
+   background-image: url('../assets/bg-boost-desktop.svg');
+
+   h2 {
+      color: white;
+      margin-bottom: 20px;
+   }
+
+   .btn {
+      padding: 10px 30px;
+   }
+}
+
+
+
+
+footer {
+   background-color: $grayviolet;
+
+   .header__logo {
+      color: white !important;
+   }
+
+   .wrapper {
+      margin-bottom: 0;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   ul {
+      &:first-child {
+         color: white;
+         font-weight: 600;
+      }
+
+   }
+
+   li {
+      cursor: pointer;
+
+      &:first-of-type {
+         color: white;
+         font-weight: 600;
+
+      }
+
+      transition: all .3s ease;
+
+      &:hover {
+         color: $cyan;
+      }
+   }
+
+   @include tablet {
+      .wrapper {
+         text-align: center;
+         flex-direction: column;
+         gap: 20px;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+
+   .footer__social {
+      display: flex;
+      gap: 20px
+   }
+
+   img {
+      height: 30px;
+      width: 30px;
+   }
+}

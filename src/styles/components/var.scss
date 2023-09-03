@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import 'mixin.scss';
+//color
+
+$cyan:hsl(180, 66%, 49%);
+$darkviolet:hsl(257, 27%, 26%);
+$red:hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$grayviolet:hsl(255, 11%, 22%);
+$vdarkblue:hsl(257, 7%, 63%);
+$vdarkviolet:hsl(260, 8%, 14%);
+$lightgray:#f0f1f6;
+
+//font
+
+
+//size
+$h1:65px;
+$h2:35px;
+$h3:20px;
+$h5:20px;
+
+$p:18px;
+
+
+//weight
+
+$fwbold:500;
+$fwboldest:700;
+
+//family
+
+$ffpopins:'Poppins',
+sans-serif;
+//media
+
+$xl:1200px;
+$lg:767px;
+$md:567px;
+$sm:360px;
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: black;
+    font-weight: $fwboldest;
+}
+
+h1 {
+    font-size: $h1;
+    // text-transform: uppercase;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+
+}
+
+h2 {
+    font-size: $h2;
+
+}
+
+h3 {
+    font-size: $h3;
+
+}
+
+h5 {
+    font-size: $h5;
+    font-weight: 300;
+}
+
+
+p {
+    // color: $grayblue;
+    font-size: $p;
+}
+
+
+@include tablet {
+    $h1: 30px;
+    $h2: 20px;
+
+}

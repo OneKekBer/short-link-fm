@@ -1,0 +1,77 @@
+@import 'var.scss';
+
+a {
+    text-decoration: none;
+    color: $cyan
+}
+
+ul {
+    list-style-image: none;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $ffpopins;
+    color: $gray;
+    font-weight: $fwbold;
+    overflow-x: hidden;
+
+
+}
+
+.btn {
+    @include btn()
+}
+
+.wrapper {
+    padding: 1% 10%;
+    margin-bottom: 5%;
+}
+
+
+.flex-between {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.bg-gray {
+    background: $lightgray;
+}
+
+.bg-viol {
+    background: $darkviolet;
+}

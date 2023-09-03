@@ -1,0 +1,61 @@
+// @import './var.scss';
+
+@mixin btn () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 7px 20px;
+
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+
+    background-color: $cyan;
+    border: none;
+
+    transition: all .3s ease;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    border-radius: 16px;
+
+    &:hover {
+
+        transition: all .5s;
+        background-color: brightness($cyan, 1.5);
+    }
+}
+
+
+
+
+@mixin desktop() {
+    @media (max-width:$xl) {
+        @content
+    }
+}
+
+
+
+@mixin laptop() {
+    @media (max-width:$lg) {
+        @content
+    }
+}
+
+
+
+@mixin tablet() {
+    @media (max-width:$md) {
+        @content
+    }
+}
+
+
+
+@mixin mobile() {
+    @media (max-width:$sm) {
+        @content
+    }
+}
